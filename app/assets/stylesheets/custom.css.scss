@@ -1,1 +1,120 @@
 @import 'bootstrap/dist/css/bootstrap';
+body{
+  background-image: url(home.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#logo{
+  float: left;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bolder;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+#searchButton{
+  background-color: white;
+}
+
+#articlesLink{
+  font-weight: bold;
+}
+
+#homeJumbotron{
+  width: 70%;
+  height: 60%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-top:14%;
+  margin-left: auto;
+  margin-right: auto;
+  //background: rgba(255, 255, 255, 0.3);
+  background: transparent;
+  text-align: center;
+}
+
+#homeName{
+  margin-top: 10%;
+  font-family: monospace;
+  font-weight: bold;
+  color: rgba(39, 75, 75, 0.7);
+}
+
+#login{
+  margin-top: 10%;
+  margin-left: 3%;
+  width: 30%;
+  font-size: 0.7em;
+  background: rgba(255, 255, 255, 0.2);
+  //background: transparent;
+  //color: rgba(91, 85, 76, 1);
+}
+
+#signup{
+  margin-top: 10%;
+  margin-right: 3%;
+  width: 30%;
+  font-size: 0.7em;
+  background: rgba(255, 255, 255, 0.2);
+  //background: transparent;
+  //color: rgba(91, 85, 76, 1);
+}
+.offset {
+  box-shadow:
+    0.3em 0.3em 0 0 var(--color),
+    inset 0.3em 0.3em 0 0 var(--color);
+
+  &:hover,
+  &:focus {
+    box-shadow:
+      0 0 0 0 var(--hover),
+      inset 6em 3.5em 0 0 var(--hover);
+  }
+}
+
+//=== Set button colors
+// If you wonder why use Sass vars or CSS custom properties...
+  // Make a map with the class names and matching colors
+$colors: (
+  offset: rgba(91, 85, 76, 0.5)
+);
+
+// Sass variables compile to a static string; CSS variables are dynamic and inherited
+  // Loop through the map and set CSS custom properties using Sass variables
+@each $button, $color in $colors {
+  .#{$button} {
+    --color: #{$color};
+    --hover: #{adjust-hue($color, 45deg)};
+  }
+}
+
+// Now every button will have different colors as set above. We get to use the same structure, only changing the custom properties.
+#signup {
+  color: var(--color);
+  transition: 0.25s;
+
+  &:hover,
+  &:focus {
+    border-color: var(--hover);
+    color: rgba(91, 85, 76, 1);
+  }
+}
+
+#login {
+  color: var(--color);
+  transition: 0.25s;
+
+  &:hover,
+  &:focus {
+    border-color: var(--hover);
+    color: rgba(91, 85, 76, 1);
+  }
+}

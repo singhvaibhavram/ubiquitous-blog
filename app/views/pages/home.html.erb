@@ -1,4 +1,7 @@
-<h1>This is my home page of the blog</h1>
-
-<h3>This is the link to the <%= link_to "About Page", about_path %></h3><br />
-<h3>This is the link to the <%= link_to "Blog", articles_path %></h3>
+<div class="jumbotron" id="homeJumbotron">
+  <h1 class="display-4" id="homeName">Wandering Albus</h1>
+  <p class="display-4">
+    <%= link_to "Sign Up", "#", class: "btn btn-lg shadow rounded offset", id: "signup" %>
+    <%= link_to "Login", "#", class: "btn btn-lg shadow rounded offset", id: "login" %>
+  </p>
+</div>
