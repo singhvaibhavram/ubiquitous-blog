@@ -1,4 +1,15 @@
 @import 'bootstrap/dist/css/bootstrap';
+
+/* Global Values */
+.bold{
+  font-weight: bold;
+}
+
+/* Flash Messages */
+#flashMessages{
+  margin-top: 2%;
+}
+
 //Body
 body{
   background-image: url(home.jpg);
@@ -115,13 +126,17 @@ $colors: (
 /* New Article Page */
 #newArticleJumbotron{
   margin-top: 1%;
-  height: 570px;
   background: rgba(255, 255, 255, 0.8);
+}
+#newArticleHeading{
+  text-align: center;
 }
 
 /* Edit Article Page */
 #editArticleJumbotron{
   margin-top: 1%;
-  height: 570px;
   background: rgba(255, 255, 255, 0.8);
+}
+#editArticleHeading{
+  text-align: center;
 }
