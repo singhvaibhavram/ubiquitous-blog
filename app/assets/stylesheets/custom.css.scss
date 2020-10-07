@@ -1,8 +1,33 @@
 @import 'bootstrap/dist/css/bootstrap';
 
+/* Font Declaration
+@font-face{
+  font-family: 'Sallsa';
+  src: asset-url('fonts/Sallsa.ttf');
+}
+*/
+
+/* Font Awesome Declaration */
+$fa-font-path: '@fortawesome/fontawesome-free/webfonts';
+@import '@fortawesome/fontawesome-free/scss/fontawesome';
+@import '@fortawesome/fontawesome-free/scss/solid';
+@import '@fortawesome/fontawesome-free/scss/regular';
+@import '@fortawesome/fontawesome-free/scss/brands';
+@import '@fortawesome/fontawesome-free/scss/v4-shims';
+
+
 /* Global Values */
 .bold{
   font-weight: bold;
+}
+.font-family-monospace{
+  font-family: monospace;
+}
+.font-family-sans{
+  font-family: sans-serif;
+}
+.font-family-serif{
+  font-family: serif;
 }
 
 /* Flash Messages */
@@ -139,4 +164,20 @@ $colors: (
 }
 #editArticleHeading{
   text-align: center;
+}
+
+/* Article Show Page */
+#articleShowJumbtron{
+  padding: 7%;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+}
+#articleShowHeader{
+  text-align: center;
+  font-family: monospace;
+  color: rgba(39, 75, 75, 1);
+}
+#articleActions{
+  border-top: 1px solid #eaeaea;
+  padding-top: 5px;
 }
