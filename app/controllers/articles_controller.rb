@@ -1,17 +1,22 @@
 class ArticlesController < ApplicationController
   before_action :set_params, only: [:edit, :update, :show, :destroy]
-
+  # New Article
   def new
     @article = Article.new
   end
 
+  # Article Listing
   def index
     @articles = Article.all
   end
 
+  # On New Article Submit
   def create
     #render plain: params[:article].inspect
     @article = Article.new(article_params)
+    # Hardcoded User for the time being
+    @article.user = User.first
+    # Saving Article to Database
     if @article.save
       flash[:success] = "Article was successfully created"
       redirect_to article_path(@article)
@@ -20,10 +25,15 @@ class ArticlesController < ApplicationController
     end
   end
 
+  # Edit Article
   def edit
   end
 
+  # On Edit Article Submit
   def update
+    # Updating in Database
+    # Hardcoded User for the time being
+    @article.user = User.first
     if @article.update(article_params)
       flash[:success] = "Article was successfully updated"
       redirect_to article_path(@article)
@@ -35,6 +45,7 @@ class ArticlesController < ApplicationController
   def show
   end
 
+  # Deleting the Article
   def destroy
     @article.destroy
     flash[:danger] = "Article was successfully deleted"
