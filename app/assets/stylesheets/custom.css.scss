@@ -200,7 +200,6 @@ $colors: (
 }
 
 /* Articles List Page */
-
 #articleListJumbtron{
   margin-top: auto;
   margin-left: auto;
@@ -208,4 +207,9 @@ $colors: (
   margin-bottom: 2%;
   width: 70%;
   background: rgba(255, 255, 255, 0.6);
+}
+#article-meta-details{
+  border-top: 1px solid transparent;
+  margin-top:15px;
+  font-size: 15px;
 }
