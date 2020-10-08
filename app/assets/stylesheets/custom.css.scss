@@ -29,6 +29,13 @@ $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
 .font-family-serif{
   font-family: serif;
 }
+.centered-item{
+  text-align: center;
+}
+.a-link, .a-link:hover{
+  color: black
+}
+
 
 /* Flash Messages */
 #flashMessages{
@@ -173,11 +180,20 @@ $colors: (
   border-radius: 20px;
 }
 #articleShowHeader{
-  text-align: center;
   font-family: monospace;
   color: rgba(39, 75, 75, 1);
 }
 #articleActions{
-  border-top: 1px solid #eaeaea;
   padding-top: 5px;
+}
+
+/* Articles List Page */
+
+#articleListJumbtron{
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2%;
+  width: 70%;
+  background: rgba(255, 255, 255, 0.6);
 }
