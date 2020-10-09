@@ -35,7 +35,12 @@ $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
 .a-link, .a-link:hover{
   color: black
 }
-
+.btn-warning{
+  color: rgba(255, 255, 255, 1);
+}
+#articleActions{
+  padding-top: 5px;
+}
 
 /* Flash Messages */
 #flashMessages{
@@ -194,9 +199,6 @@ $colors: (
 #articleShowHeader{
   font-family: monospace;
   color: rgba(39, 75, 75, 1);
-}
-#articleActions{
-  padding-top: 5px;
 }
 
 /* Articles List Page */
