@@ -15,6 +15,8 @@ $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
 @import '@fortawesome/fontawesome-free/scss/brands';
 @import '@fortawesome/fontawesome-free/scss/v4-shims';
 
+/* Font Declaration */
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
 
 /* Global Values */
 .bold{
@@ -214,4 +216,35 @@ $colors: (
   border-top: 1px solid transparent;
   margin-top:15px;
   font-size: 15px;
+}
+
+/* Signup Page */
+#signupContainer{
+  margin-top: 7%;
+}
+#signupHeader{
+  padding-top: 1.5rem;
+  color: rgba(39, 75, 75, 1);
+}
+#signupCard{
+  background-color: rgba(255, 255, 255, 0.7);
+}
+#signupName, #signupEmail, #signupPassword{
+  background-color: #f8f9fa;
+  padding: 20px;
+  padding: 25px 15px;
+  margin-bottom: 1.3rem;
+}
+#signupName:focus, #signupEmail:focus, #signupPassword:focus{
+    color: #000000;
+    background-color: #ffffff;
+    border: 3px solid #da5767;
+    outline: 0;
+    box-shadow: none;
+}
+#signupdiv{
+  text-align: center;
+}
+#signupButton{
+  width: 45%;
 }
