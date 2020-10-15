@@ -40,6 +40,9 @@ $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
 .btn-warning{
   color: rgba(255, 255, 255, 1);
 }
+.alert{
+  text-align: center;
+}
 #articleActions{
   padding-top: 5px;
 }
@@ -247,4 +250,39 @@ $colors: (
 }
 #signupButton{
   width: 45%;
+}
+
+/* Edit User Account */
+#editContainer{
+  margin-top: 7%;
+}
+#editHeader{
+  padding-top: 1.5rem;
+  color: rgba(39, 75, 75, 1);
+}
+#editCard{
+  background-color: rgba(255, 255, 255, 0.7);
+}
+#editName, #editEmail, #editPassword{
+  background-color: #f8f9fa;
+  padding: 20px;
+  padding: 25px 15px;
+  margin-bottom: 1.3rem;
+}
+#editName:focus, #editEmail:focus, #editPassword:focus{
+    color: #000000;
+    background-color: #ffffff;
+    border: 3px solid #da5767;
+    outline: 0;
+    box-shadow: none;
+}
+#editdiv{
+  text-align: center;
+}
+#editButton{
+  width: 45%;
+}
+
+#editButton:hover{
+  color: rgba(255, 255, 255, 1);
 }
