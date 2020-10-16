@@ -1,0 +1,26 @@
+<% obj.each do |article| %>
+  <div class="jumbotron" id="articleListJumbtron">
+    <h4 class="bold font-family-monospace" id="articleShowHeader">
+      <%= link_to article.title, article_path(article), class: "a-link" %>
+    </h4>
+    <br />
+    <p>
+      <%= truncate(article.description, length: 100) %>
+    </p>
+    <p id="article-meta-details">
+      <small>
+        Created by: <%= article.user.username if article.user %>,
+                   <%= time_ago_in_words(article.created_at) %> ago,
+                   Last updated: <%= time_ago_in_words(article.updated_at) %> ago.
+      </small>
+    </p>
+    <div class="float-right" id="articleActions">
+      <%= link_to edit_article_path(article), class: "btn btn-sm btn-warning" do %>
+        Edit this Article <i class="fa fa-edit" aria-hidden="true"></i>
+      <% end %>
+      <%= link_to article_path(article),class: "btn btn-sm btn-danger", method: :delete, data: {confirm: "Are you sure?"} do %>
+        Delete this Article <i class="fa fa-trash" aria-hidden="true"></i>
+      <% end %>
+    </div>
+  </div>
+<% end %>

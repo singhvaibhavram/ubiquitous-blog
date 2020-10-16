@@ -282,7 +282,30 @@ $colors: (
 #editButton{
   width: 45%;
 }
-
 #editButton:hover{
   color: rgba(255, 255, 255, 1);
+}
+
+/* Show user Profile */
+#showUser{
+  background: rgba(255, 255, 255, 1);
+  height: 555px;
+  overflow: hidden;
+}
+#userImage{
+  padding: 1%;
+}
+#userArticles{
+  height: 230px;
+  overflow: auto;
+  background: rgba(240, 240, 240, 1);
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+#userArticles::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+#userArticles{
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
