@@ -206,6 +206,7 @@ $colors: (
   color: rgba(39, 75, 75, 1);
 }
 
+
 /* Articles List Page */
 #articleListJumbtron{
   margin-top: auto;
@@ -308,4 +309,14 @@ $colors: (
 #userArticles{
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+}
+
+/* User List Page */
+#userList{
+  background: rgba(255, 255, 255, 1);
+}
+
+#listings{
+  background: rgba(240, 240, 240, 1);
+  width: 50%;
 }
