@@ -4,7 +4,7 @@
       <%= gravatar_for @user %>
     </div>
   <h4 align="center"> <%= @user.username %>'s Articles </h4>
-  <div id="userArticles">
+  <div class="rounded" id="userArticles">
     <%= render 'articles/article', obj: @user.articles %>
   </div>
 </div>

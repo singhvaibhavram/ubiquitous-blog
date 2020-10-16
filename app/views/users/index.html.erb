@@ -1,19 +1,21 @@
 <div class="container jumbotron" id="userList" align="center">
-  <h1>List of all Wanderers</h1>
+  <h1 class="bold font-family-monospace" id="userShowHeader">List of all Wanderers</h1>
   <% @users.each do |user| %>
-  <div class="row" align="center">
-    <ul id="listings">
-        <div class="col-sm-4 col-sm-offset-">
-          <li><%= link_to gravatar_for(user), user_path(user) %></li>
-          <li class="bold font-family-face" id="articleShowHeader">
-            <%= link_to user.username, user_path(user) %>
-          </li>
-          <li id="article-meta-details">
-            <small> <%= pluralize(user.articles.count, "article") if user.articles %> </small>
-          </li>
-        </div>
+  <div class="jumbotron" id="userListJumbtron">
+    <p align="center">
+      <%= link_to gravatar_for(user), user_path(user) %>
+    </p>
+    <h4 class="bold font-family-monospace" id="userShowHeader">
+      <%= link_to user.username, user_path(user), id: "userListName" %>
+    </h4>
+    <br />
 
-    </ul>
-    </div>
+    <p>
+      <small>
+        <%= pluralize(user.articles.count, "article") if user.articles %>
+      </small>
+    </p>
+  </div>
+
   <% end %>
 </div>
