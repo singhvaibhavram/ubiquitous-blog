@@ -207,7 +207,7 @@ $colors: (
 }
 #articleShowUsername{
   font-family: monospace;
-  color: rgba(39, 75, 75, 1);  
+  color: rgba(39, 75, 75, 1);
 }
 
 /* Articles List Page */
@@ -234,7 +234,7 @@ $colors: (
   color: rgba(39, 75, 75, 1);
 }
 #signupCard{
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.95);
 }
 #signupName, #signupEmail, #signupPassword{
   background-color: #f8f9fa;
@@ -253,6 +253,37 @@ $colors: (
   text-align: center;
 }
 #signupButton{
+  width: 45%;
+}
+
+/* Login Page */
+#loginContainer{
+  margin-top: 7%;
+}
+#loginHeader{
+  padding-top: 1.5rem;
+  color: rgba(39, 75, 75, 1);
+}
+#loginCard{
+  background-color: rgba(255, 255, 255, 0.95);
+}
+#loginName, #loginEmail, #loginPassword{
+  background-color: #f8f9fa;
+  padding: 20px;
+  padding: 25px 15px;
+  margin-bottom: 1.3rem;
+}
+#loginName:focus, #loginEmail:focus, #loginPassword:focus{
+    color: #000000;
+    background-color: #ffffff;
+    border: 3px solid #da5767;
+    outline: 0;
+    box-shadow: none;
+}
+#logindiv{
+  text-align: center;
+}
+#loginButton{
   width: 45%;
 }
 

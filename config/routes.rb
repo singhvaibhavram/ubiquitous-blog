@@ -6,10 +6,15 @@ Rails.application.routes.draw do
   # All Article Routes
   resources :articles
 
-  # User Signup Page
+  # User Signup Page and Login Page
   get 'signup', to: 'users#new'
-  # All User Routes except new
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
+
+  # All User Routes except Sugnup and Login
   resources :users, except: [:new]
-  #User Create Paot Method
+
+  #User Create Post Method
   #post 'users', to: 'users#create'
 end
