@@ -5,7 +5,9 @@
       <% if @article.user %>
         <%= link_to gravatar_for(@article.user), user_path(@article.user) %>
         <br />
-        <%= link_to @article.user.username, user_path(@article.user) %>
+        <h1 class="display-5 bold centered-item font-family-monospace">
+        <%= link_to @article.user.username, user_path(@article.user), id: "articleShowUsername" %>
+        </h1>
       <% end %>
   </h1>
   <br />
