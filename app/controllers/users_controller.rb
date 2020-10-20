@@ -14,8 +14,9 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     # Saving User to Database
     if @user.save
+      session[:user_id] = @user.id
       flash[:success] = "Welcome to Wandering Albus #{@user.username}"
-      redirect_to articles_path
+      redirect_to user_path(@user)
     else
       render 'new'
     end
