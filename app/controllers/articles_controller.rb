@@ -17,7 +17,7 @@ class ArticlesController < ApplicationController
     #render plain: params[:article].inspect
     @article = Article.new(article_params)
     # Hardcoded User for the time being
-    @article.user = User.first
+    @article.user = current_user
     # Saving Article to Database
     if @article.save
       flash[:success] = "Article was successfully created"
