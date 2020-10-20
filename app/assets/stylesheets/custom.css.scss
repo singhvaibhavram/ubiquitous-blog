@@ -73,6 +73,15 @@ body{
   background-attachment: fixed;
 }
 
+/* Navigation */
+.dropdownLink{
+  color: rgba(0, 0, 0, 1);
+}
+.dropdownLink:hover{
+  color: rgba(0, 0, 0, 1);
+  text-decoration: none;
+}
+
 /* Home Page */
 #logo{
   float: left;
@@ -86,9 +95,6 @@ body{
 }
 #searchButton{
   background-color: white;
-}
-#articlesLink{
-  font-weight: bold;
 }
 #homeJumbotron{
   width: 70%;

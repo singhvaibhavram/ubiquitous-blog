@@ -9,23 +9,26 @@
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
         <!-- <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> -->
-        <%= link_to "Articles", articles_path, class: "nav-link", id: "articlesLink" %>
+        <%= link_to "Articles", articles_path, class: "nav-link bold" %>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <!--<a class="nav-link" href="#">Link</a>-->
+        <%= link_to "Users", users_path, class: "nav-link bold" %>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Actions
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <!-- <a class="dropdown-item" href="#">Action</a> -->
-          <%= link_to "New Article", new_article_path, class: "dropdown-item" %>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
+      <% if logged_in? %>
+        <li class="nav-item dropdown">
+          <a class="nav-link bold" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Actions
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <!-- <a class="dropdown-item" href="#">Action</a> -->
+            <%= link_to "New Article", new_article_path, class: "dropdown-item" %>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+      <% end %>
     </ul>
     <!-- <ul class="navbar-nav">
       <form class="form-inline my-2 my-lg-0">
@@ -34,27 +37,29 @@
       </form>
     </ul> -->
     <% if logged_in? %>
+      <li class="form-inline navbar-nav nav-item dropdown">
+        <a class="nav-link bold" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Profile
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="navbarDropdown">
+          <!--<a class="dropdown-item"></a>-->
+          <%= link_to "Edit your Profile", edit_user_path(current_user), class: "dropdown-item" %>
+          <!--<a class="dropdown-item">Another action</a>-->
+          <%= link_to "View your Profile", user_path(current_user), class: "dropdown-item" %>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item">Something else here</a>
+        </div>
+      </li>
       <li class="navbar-nav nav-item">
         <!--<a class="nav-link" href="#">Link</a>-->
 
-        <%= link_to 'Logout', logout_path, method: :delete, class: "nav-link" %>
-      </li>
-      <li class="form-inline navbar-nav nav-item dropdown">
-        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
+        <%= link_to 'Logout', logout_path, method: :delete, class: "nav-link bold" %>
       </li>
     <% else %>
-      <li class="navbar-nav nav-item">
+      <li class="navbar-nav nav-item bold">
         <%= link_to 'Login', login_path, class: "nav-link" %>
       </li>
-      <li class="navbar-nav nav-item">
+      <li class="navbar-nav nav-item bold">
         <%= link_to 'Signup', signup_path, class: "nav-link" %>
       </li>
     <% end %>
